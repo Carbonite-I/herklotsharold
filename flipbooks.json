@@ -1,0 +1,15 @@
+{
+  "site": {
+    "title": "Perpustakaan Flipbook",
+    "description": "Klik salah satu buku untuk membacanya sebagai flipbook interaktif."
+  },
+  "flipbooks": [
+    {
+      "id": "contoh-katalog",
+      "title": "Contoh Katalog",
+      "description": "",
+      "file": "pdfs/contoh-katalog.pdf",
+      "added": "2026-11-24"
+    }
+  ]
+}

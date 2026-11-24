@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Flipbook</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="viewer">
+  <header class="topbar">
+    <a class="brand" href="./" title="Kembali ke perpustakaan">&#9664;</a>
+    <h1 id="docTitle">Flipbook</h1>
+    <div class="spacer"></div>
+    <button class="icon" id="btnShare" title="Bagikan / embed">&#128279;</button>
+    <a class="icon" id="btnDownload" title="Unduh PDF" download hidden>&#11015;</a>
+    <button class="icon" id="btnSound" title="Suara balik halaman">&#128264;</button>
+  </header>
+
+  <main id="stage">
+    <div id="zoomLayer"><div id="bookWrap"><div id="book"></div></div></div>
+    <button class="nav prev" id="navPrev" aria-label="Halaman sebelumnya">&#10094;</button>
+    <button class="nav next" id="navNext" aria-label="Halaman berikutnya">&#10095;</button>
+
+    <div id="loader" class="overlay">
+      <div class="spinner"></div>
+      <p id="loaderText">Memuat PDF…</p>
+      <div class="progress"><span id="loaderBar"></span></div>
+    </div>
+
+    <div id="dropScreen" class="overlay" hidden>
+      <div class="drop-box" id="dropBox">
+        <h2>Buka PDF jadi flipbook</h2>
+        <p>Tarik &amp; lepas file PDF di sini, atau</p>
+        <label class="btn">Pilih PDF<input type="file" id="fileInput" accept="application/pdf" hidden></label>
+        <p class="muted">File hanya dibuka di browser Anda, tidak diunggah ke mana pun.</p>
+      </div>
+    </div>
+  </main>
+
+  <aside id="thumbs" hidden></aside>
+
+  <footer class="toolbar">
+    <button class="icon" id="btnThumbs" title="Thumbnail">&#9638;</button>
+    <button class="icon" id="btnFirst" title="Halaman pertama">&#10218;</button>
+    <button class="icon" id="btnPrev" title="Sebelumnya">&#10094;</button>
+    <span class="pager"><input id="pageInput" type="text" inputmode="numeric" value="1"> / <span id="pageTotal">–</span></span>
+    <button class="icon" id="btnNext" title="Berikutnya">&#10095;</button>
+    <button class="icon" id="btnLast" title="Halaman terakhir">&#10219;</button>
+    <span class="sep"></span>
+    <button class="icon" id="btnZoomOut" title="Perkecil">&#8722;</button>
+    <button class="icon" id="btnZoomIn" title="Perbesar">+</button>
+    <button class="icon" id="btnFull" title="Layar penuh">&#9974;</button>
+  </footer>
+
+  <dialog id="shareDialog">
+    <form method="dialog">
+      <h3>Bagikan flipbook</h3>
+      <label>Link<input id="shareLink" readonly></label>
+      <label>Kode embed (website/blog)<textarea id="shareEmbed" rows="3" readonly></textarea></label>
+      <div class="row">
+        <button type="button" class="btn" id="copyLink">Salin link</button>
+        <button type="button" class="btn" id="copyEmbed">Salin embed</button>
+        <button class="btn ghost">Tutup</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="vendor/pdfjs/pdf.min.js"></script>
+  <script src="vendor/page-flip/page-flip.browser.js"></script>
+  <script src="assets/js/viewer.js"></script>
+</body>
+</html>

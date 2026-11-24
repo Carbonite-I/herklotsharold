@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perpustakaan Flipbook</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="gallery">
+  <header class="g-header">
+    <h1 id="siteTitle">Perpustakaan Flipbook</h1>
+    <p id="siteDesc">Klik salah satu buku untuk membacanya sebagai flipbook interaktif.</p>
+    <div class="g-actions">
+      <a class="btn" href="viewer.html">&#128194; Buka PDF dari komputer</a>
+    </div>
+  </header>
+
+  <main class="grid" id="grid"><p class="empty">Memuat…</p></main>
+
+  <footer class="g-footer">
+    Dibuat dengan <a href="https://github.com/mozilla/pdf.js">PDF.js</a> &amp;
+    <a href="https://github.com/Nodlik/StPageFlip">StPageFlip</a> (open source)
+  </footer>
+
+  <script src="vendor/pdfjs/pdf.min.js"></script>
+  <script src="assets/js/gallery.js"></script>
+</body>
+</html>
