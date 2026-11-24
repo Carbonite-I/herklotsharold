@@ -1,0 +1,11 @@
+{
+  "name": "flipbook-pdf",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Flipbook PDF interaktif statis (PDF.js + StPageFlip)",
+  "scripts": {
+    "manifest": "node scripts/build-manifest.mjs",
+    "start": "node scripts/build-manifest.mjs && npx -y http-server -p 8080 -c-1 ."
+  },
+  "license": "MIT"
+}
